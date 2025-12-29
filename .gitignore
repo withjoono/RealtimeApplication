@@ -1,0 +1,12 @@
+node_modules/
+dist/
+.env
+*.log
+nul
+__pycache__/
+*.pyc
+.venv/
+venv/
+.DS_Store
+Thumbs.db
+Upload/

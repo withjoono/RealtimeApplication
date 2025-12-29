@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+:root {
+  font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', sans-serif;
+}
+
+body {
+  @apply bg-gray-50 text-gray-900 antialiased;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-100;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-300 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-400;
+}
+
+/* Competition rate color classes */
+.rate-low {
+  @apply text-green-600 bg-green-50;
+}
+
+.rate-medium {
+  @apply text-yellow-600 bg-yellow-50;
+}
+
+.rate-high {
+  @apply text-orange-600 bg-orange-50;
+}
+
+.rate-very-high {
+  @apply text-red-600 bg-red-50;
+}

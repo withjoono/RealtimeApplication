@@ -1,0 +1,18 @@
+{
+  "name": "application-rate",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "crawl": "node crawler.js crawl",
+    "monitor": "node crawler.js monitor",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "playwright": "^1.57.0",
+    "xlsx": "^0.18.5"
+  }
+}
