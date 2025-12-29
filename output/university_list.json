@@ -1,547 +1,1266 @@
 {
-  "lastUpdated": "2025-12-29T02:28:19.143Z",
+  "lastUpdated": "2025-12-29T07:35:43.333Z",
   "open": [
     {
       "name": "가야대학교",
       "code": "10010671",
       "ratioUrl": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10010671.html",
+      "urlType": "jinhak",
       "status": "open"
     },
     {
       "name": "가천대학교",
       "code": "10190591",
       "ratioUrl": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10190591.html",
+      "urlType": "jinhak",
+      "status": "open"
+    },
+    {
+      "name": "가톨릭관동대학교",
+      "code": "Sl5KOjlMSnJXOi9KLWZUZg==",
+      "ratioUrl": "https://ratio.uwayapply.com/Sl5KOjlMSnJXOi9KLWZUZg==",
+      "urlType": "uway",
+      "status": "open"
+    },
+    {
+      "name": "가톨릭꽃동네대학교",
+      "code": "Sl5KMGE5OUpyVzovSi1mVGY=",
+      "ratioUrl": "https://ratio.uwayapply.com/Sl5KMGE5OUpyVzovSi1mVGY=",
+      "urlType": "uway",
+      "status": "open"
+    },
+    {
+      "name": "가톨릭대학교",
+      "code": "Sl5KTCVDYXwwOExKclc6L0otZlRm",
+      "ratioUrl": "https://ratio.uwayapply.com/Sl5KTCVDYXwwOExKclc6L0otZlRm",
+      "urlType": "uway",
+      "status": "open"
+    },
+    {
+      "name": "강남대학교",
+      "code": "Sl5KTThXclc4OUpyVzovSi1mVGY=",
+      "ratioUrl": "https://ratio.uwayapply.com/Sl5KTThXclc4OUpyVzovSi1mVGY=",
+      "urlType": "uway",
       "status": "open"
     },
     {
       "name": "강서대학교",
       "code": "10360701",
       "ratioUrl": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10360701.html",
+      "urlType": "jinhak",
+      "status": "open"
+    },
+    {
+      "name": "강원대학교(강릉,원주)",
+      "code": "Sl5KOldOckpyVzovSi1mVGY=",
+      "ratioUrl": "https://ratio.uwayapply.com/Sl5KOldOckpyVzovSi1mVGY=",
+      "urlType": "uway",
+      "status": "open"
+    },
+    {
+      "name": "강원대학교(춘천,삼척)",
+      "code": "Sl5KV2FOclc4OUpyVzovSi1mVGY=",
+      "ratioUrl": "https://ratio.uwayapply.com/Sl5KV2FOclc4OUpyVzovSi1mVGY=",
+      "urlType": "uway",
       "status": "open"
     },
     {
       "name": "건국대학교 서울캠퍼스",
       "code": "10080331",
       "ratioUrl": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10080331.html",
+      "urlType": "jinhak",
       "status": "open"
     },
     {
       "name": "건국대학교(글로컬)",
       "code": "10091121",
       "ratioUrl": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10091121.html",
+      "urlType": "jinhak",
       "status": "open"
     },
     {
       "name": "건양대학교",
       "code": "10100721",
       "ratioUrl": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10100721.html",
+      "urlType": "jinhak",
+      "status": "open"
+    },
+    {
+      "name": "경기대학교",
+      "code": "Sl5KJXJyV2FiOUpyVzovSi1mVGY=",
+      "ratioUrl": "https://ratio.uwayapply.com/Sl5KJXJyV2FiOUpyVzovSi1mVGY=",
+      "urlType": "uway",
       "status": "open"
     },
     {
       "name": "경남대학교",
       "code": "10130531",
       "ratioUrl": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10130531.html",
+      "urlType": "jinhak",
       "status": "open"
     },
     {
       "name": "경동대학교",
       "code": "10140381",
       "ratioUrl": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10140381.html",
+      "urlType": "jinhak",
+      "status": "open"
+    },
+    {
+      "name": "경북대학교",
+      "code": "Sl5KOlc5SnJXOi9KLWZUZg==",
+      "ratioUrl": "https://ratio.uwayapply.com/Sl5KOlc5SnJXOi9KLWZUZg==",
+      "urlType": "uway",
       "status": "open"
     },
     {
       "name": "경상국립대학교",
       "code": "10170861",
       "ratioUrl": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10170861.html",
+      "urlType": "jinhak",
+      "status": "open"
+    },
+    {
+      "name": "경성대학교",
+      "code": "Sl5KJjlKclc6L0otZlRm",
+      "ratioUrl": "https://ratio.uwayapply.com/Sl5KJjlKclc6L0otZlRm",
+      "urlType": "uway",
+      "status": "open"
+    },
+    {
+      "name": "경운대학교",
+      "code": null,
+      "ratioUrl": "https://www.ikw.ac.kr/ipsi/board/detail.tc?password=&mngNo=184&boardCategory=&viewType=sub&boardNo=329143&pageSeq=2167&mn=2417",
+      "urlType": "custom",
       "status": "open"
     },
     {
       "name": "경인교육대학교",
       "code": "20060241",
       "ratioUrl": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio20060241.html",
+      "urlType": "jinhak",
+      "status": "open"
+    },
+    {
+      "name": "경일대학교",
+      "code": null,
+      "ratioUrl": "https://ibsi.kiu.ac.kr/ipsi_rate/rate_jungsi_real_new_251216.htm",
+      "urlType": "custom",
+      "status": "open"
+    },
+    {
+      "name": "경희대학교",
+      "code": "Sl5KOnw5SnJXOi9KLWZUZg==",
+      "ratioUrl": "https://ratio.uwayapply.com/Sl5KOnw5SnJXOi9KLWZUZg==",
+      "urlType": "uway",
+      "status": "open"
+    },
+    {
+      "name": "계명대학교",
+      "code": "Sl5KOk05SnJXOi9KLWZUZg==",
+      "ratioUrl": "https://ratio.uwayapply.com/Sl5KOk05SnJXOi9KLWZUZg==",
+      "urlType": "uway",
+      "status": "open"
+    },
+    {
+      "name": "고려대학교(세종)",
+      "code": "Sl5KcldhL2AmOzhgfWE5SnJXOi9KLWZUZg==",
+      "ratioUrl": "https://ratio.uwayapply.com/Sl5KcldhL2AmOzhgfWE5SnJXOi9KLWZUZg==",
+      "urlType": "uway",
+      "status": "open"
+    },
+    {
+      "name": "고려대학교(안암)",
+      "code": "Sl5KOGB9YTlKclc6L0otZlRm",
+      "ratioUrl": "https://ratio.uwayapply.com/Sl5KOGB9YTlKclc6L0otZlRm",
+      "urlType": "uway",
+      "status": "open"
+    },
+    {
+      "name": "고신대학교",
+      "code": "Sl5KVyUmYTlKclc6L0otZlRm",
+      "ratioUrl": "https://ratio.uwayapply.com/Sl5KVyUmYTlKclc6L0otZlRm",
+      "urlType": "uway",
+      "status": "open"
+    },
+    {
+      "name": "공주교육대학교",
+      "code": "Sl5KYDY6L3JXYTlKclc6L0otZlRm",
+      "ratioUrl": "https://ratio.uwayapply.com/Sl5KYDY6L3JXYTlKclc6L0otZlRm",
+      "urlType": "uway",
+      "status": "open"
+    },
+    {
+      "name": "광운대학교",
+      "code": "Sl5KTjlKclc6L0otZlRm",
+      "ratioUrl": "https://ratio.uwayapply.com/Sl5KTjlKclc6L0otZlRm",
+      "urlType": "uway",
+      "status": "open"
+    },
+    {
+      "name": "광주교육대학교",
+      "code": "Sl5KYDY6L3JXOE45SnJXOi9KLWZUZg==",
+      "ratioUrl": "https://ratio.uwayapply.com/Sl5KYDY6L3JXOE45SnJXOi9KLWZUZg==",
+      "urlType": "uway",
+      "status": "open"
+    },
+    {
+      "name": "광주대학교",
+      "code": "Sl5KOi9yVzhOckpyVzovSi1mVGY=",
+      "ratioUrl": "https://ratio.uwayapply.com/Sl5KOi9yVzhOckpyVzovSi1mVGY=",
+      "urlType": "uway",
+      "status": "open"
+    },
+    {
+      "name": "광주여자대학교",
+      "code": "Sl5KOk45SnJXOi9KLWZUZg==",
+      "ratioUrl": "https://ratio.uwayapply.com/Sl5KOk45SnJXOi9KLWZUZg==",
+      "urlType": "uway",
+      "status": "open"
+    },
+    {
+      "name": "국립경국대학교",
+      "code": "Sl5KcldhVlc4SnJXOi9KLWZUZg==",
+      "ratioUrl": "https://ratio.uwayapply.com/Sl5KcldhVlc4SnJXOi9KLWZUZg==",
+      "urlType": "uway",
       "status": "open"
     },
     {
       "name": "국립공주대학교",
       "code": "10280951",
       "ratioUrl": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10280951.html",
+      "urlType": "jinhak",
       "status": "open"
     },
     {
       "name": "국립군산대학교",
       "code": "10350551",
       "ratioUrl": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10350551.html",
+      "urlType": "jinhak",
+      "status": "open"
+    },
+    {
+      "name": "국립금오공과대학교",
+      "code": "Sl5KfGFNOjlKclc6L0otZlRm",
+      "ratioUrl": "https://ratio.uwayapply.com/Sl5KfGFNOjlKclc6L0otZlRm",
+      "urlType": "uway",
       "status": "open"
     },
     {
       "name": "국립목포대학교",
       "code": "10690221",
       "ratioUrl": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10690221.html",
+      "urlType": "jinhak",
       "status": "open"
     },
     {
       "name": "국립목포해양대학교",
       "code": "10700481",
       "ratioUrl": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10700481.html",
+      "urlType": "jinhak",
       "status": "open"
     },
     {
       "name": "국립부경대학교",
       "code": "10720341",
       "ratioUrl": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10720341.html",
+      "urlType": "jinhak",
       "status": "open"
     },
     {
       "name": "국립순천대학교",
       "code": "10990431",
       "ratioUrl": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10990431.html",
+      "urlType": "jinhak",
       "status": "open"
     },
     {
       "name": "국립인천대학교",
       "code": "11230671",
       "ratioUrl": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio11230671.html",
+      "urlType": "jinhak",
       "status": "open"
     },
     {
       "name": "국립창원대학교",
       "code": "11350571",
       "ratioUrl": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio11350571.html",
+      "urlType": "jinhak",
       "status": "open"
     },
     {
       "name": "국립한국교통대학교",
       "code": "30150571",
       "ratioUrl": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio30150571.html",
+      "urlType": "jinhak",
+      "status": "open"
+    },
+    {
+      "name": "국립한국해양대학교",
+      "code": "Sl5KOmFNOUpyVzovSi1mVGY=",
+      "ratioUrl": "https://ratio.uwayapply.com/Sl5KOmFNOUpyVzovSi1mVGY=",
+      "urlType": "uway",
       "status": "open"
     },
     {
       "name": "국립한밭대학교",
       "code": "30040831",
       "ratioUrl": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio30040831.html",
+      "urlType": "jinhak",
+      "status": "open"
+    },
+    {
+      "name": "국민대학교",
+      "code": "Sl5KVyVNOWFhOUpyVzovSi1mVGY=",
+      "ratioUrl": "https://ratio.uwayapply.com/Sl5KVyVNOWFhOUpyVzovSi1mVGY=",
+      "urlType": "uway",
+      "status": "open"
+    },
+    {
+      "name": "극동대학교",
+      "code": "Sl5KOlY5SnJXOi9KLWZUZg==",
+      "ratioUrl": "https://ratio.uwayapply.com/Sl5KOlY5SnJXOi9KLWZUZg==",
+      "urlType": "uway",
+      "status": "open"
+    },
+    {
+      "name": "금강대학교",
+      "code": "Sl5KOnJySnJXOi9KLWZUZg==",
+      "ratioUrl": "https://ratio.uwayapply.com/Sl5KOnJySnJXOi9KLWZUZg==",
+      "urlType": "uway",
       "status": "open"
     },
     {
       "name": "김천대학교",
       "code": "40330561",
       "ratioUrl": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio40330561.html",
+      "urlType": "jinhak",
+      "status": "open"
+    },
+    {
+      "name": "나사렛대학교",
+      "code": "Sl5KOld9YTlKclc6L0otZlRm",
+      "ratioUrl": "https://ratio.uwayapply.com/Sl5KOld9YTlKclc6L0otZlRm",
+      "urlType": "uway",
+      "status": "open"
+    },
+    {
+      "name": "남부대학교",
+      "code": "Sl5KOkJNOFdKclc6L0otZlRm",
+      "ratioUrl": "https://ratio.uwayapply.com/Sl5KOkJNOFdKclc6L0otZlRm",
+      "urlType": "uway",
+      "status": "open"
+    },
+    {
+      "name": "남서울대학교",
+      "code": "Sl5KQzphYCZNOFdKclc6L0otZlRm",
+      "ratioUrl": "https://ratio.uwayapply.com/Sl5KQzphYCZNOFdKclc6L0otZlRm",
+      "urlType": "uway",
       "status": "open"
     },
     {
       "name": "단국대학교",
       "code": "10420451",
       "ratioUrl": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10420451.html",
+      "urlType": "jinhak",
       "status": "open"
     },
     {
       "name": "대구가톨릭대학교",
       "code": "10460951",
       "ratioUrl": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10460951.html",
+      "urlType": "jinhak",
+      "status": "open"
+    },
+    {
+      "name": "대구경북과학기술원",
+      "code": "SmZKMCYlclZKXiUmOiZKLWZUZg==",
+      "ratioUrl": "https://ratio.uwayapply.com/SmZKMCYlclZKXiUmOiZKLWZUZg==",
+      "urlType": "uway",
+      "status": "open"
+    },
+    {
+      "name": "대구교육대학교",
+      "code": "Sl5KYDpXVkpyVzovSi1mVGY=",
+      "ratioUrl": "https://ratio.uwayapply.com/Sl5KYDpXVkpyVzovSi1mVGY=",
+      "urlType": "uway",
       "status": "open"
     },
     {
       "name": "대구대학교",
       "code": "10440751",
       "ratioUrl": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10440751.html",
+      "urlType": "jinhak",
       "status": "open"
     },
     {
       "name": "대구한의대학교",
       "code": "10160651",
       "ratioUrl": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10160651.html",
+      "urlType": "jinhak",
       "status": "open"
     },
     {
       "name": "대신대학교",
       "code": "10480241",
       "ratioUrl": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10480241.html",
+      "urlType": "jinhak",
       "status": "open"
     },
     {
       "name": "대전대학교",
       "code": "10500941",
       "ratioUrl": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10500941.html",
+      "urlType": "jinhak",
+      "status": "open"
+    },
+    {
+      "name": "대진대학교",
+      "code": "Sl5KVyUvYDhWSnJXOi9KLWZUZg==",
+      "ratioUrl": "https://ratio.uwayapply.com/Sl5KVyUvYDhWSnJXOi9KLWZUZg==",
+      "urlType": "uway",
       "status": "open"
     },
     {
       "name": "덕성여자대학교",
       "code": "10530571",
       "ratioUrl": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10530571.html",
+      "urlType": "jinhak",
       "status": "open"
     },
     {
       "name": "동국대학교(서울)",
       "code": "10550471",
       "ratioUrl": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10550471.html",
+      "urlType": "jinhak",
       "status": "open"
     },
     {
       "name": "동국대학교(WISE)",
       "code": "10540631",
       "ratioUrl": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10540631.html",
+      "urlType": "jinhak",
+      "status": "open"
+    },
+    {
+      "name": "동덕여자대학교",
+      "code": "Sl5KOTpWcldhVkpyVzovSi1mVGY=",
+      "ratioUrl": "https://ratio.uwayapply.com/Sl5KOTpWcldhVkpyVzovSi1mVGY=",
+      "urlType": "uway",
       "status": "open"
     },
     {
       "name": "동명대학교",
       "code": "30050611",
       "ratioUrl": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio30050611.html",
+      "urlType": "jinhak",
       "status": "open"
     },
     {
       "name": "동서대학교",
       "code": "10570671",
       "ratioUrl": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10570671.html",
+      "urlType": "jinhak",
+      "status": "open"
+    },
+    {
+      "name": "동신대학교",
+      "code": "Sl5KOlclfCZyV2FWSnJXOi9KLWZUZg==",
+      "ratioUrl": "https://ratio.uwayapply.com/Sl5KOlclfCZyV2FWSnJXOi9KLWZUZg==",
+      "urlType": "uway",
       "status": "open"
     },
     {
       "name": "동아대학교",
       "code": "10591271",
       "ratioUrl": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10591271.html",
+      "urlType": "jinhak",
+      "status": "open"
+    },
+    {
+      "name": "동양대학교",
+      "code": null,
+      "ratioUrl": "https://haksa.dyu.ac.kr/manager/m_ibsi/ib_inweon/m_jeongsi_inweon.jsp?nyeondo=2026",
+      "urlType": "custom",
+      "status": "open"
+    },
+    {
+      "name": "동의대학교",
+      "code": "Sl5KOmBWSnJXOi9KLWZUZg==",
+      "ratioUrl": "https://ratio.uwayapply.com/Sl5KOmBWSnJXOi9KLWZUZg==",
+      "urlType": "uway",
+      "status": "open"
+    },
+    {
+      "name": "루터대학교",
+      "code": "Sl5KOjBDSnJXOi9KLWZUZg==",
+      "ratioUrl": "https://ratio.uwayapply.com/Sl5KOjBDSnJXOi9KLWZUZg==",
+      "urlType": "uway",
       "status": "open"
     },
     {
       "name": "명지대학교",
       "code": "10650671",
       "ratioUrl": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10650671.html",
+      "urlType": "jinhak",
       "status": "open"
     },
     {
       "name": "목원대학교",
       "code": "10670691",
       "ratioUrl": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10670691.html",
+      "urlType": "jinhak",
+      "status": "open"
+    },
+    {
+      "name": "목포가톨릭대학교",
+      "code": "Sl5KOkxNSnJXOi9KLWZUZg==",
+      "ratioUrl": "https://ratio.uwayapply.com/Sl5KOkxNSnJXOi9KLWZUZg==",
+      "urlType": "uway",
+      "status": "open"
+    },
+    {
+      "name": "배재대학교",
+      "code": "Sl5KOkxpSnJXOi9KLWZUZg==",
+      "ratioUrl": "https://ratio.uwayapply.com/Sl5KOkxpSnJXOi9KLWZUZg==",
+      "urlType": "uway",
+      "status": "open"
+    },
+    {
+      "name": "백석대학교",
+      "code": "Sl5KOkJKclc6L0otZlRm",
+      "ratioUrl": "https://ratio.uwayapply.com/Sl5KOkJKclc6L0otZlRm",
+      "urlType": "uway",
       "status": "open"
     },
     {
       "name": "부산가톨릭대학교",
       "code": "10730521",
       "ratioUrl": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10730521.html",
+      "urlType": "jinhak",
       "status": "open"
     },
     {
       "name": "부산교육대학교",
       "code": "20040261",
       "ratioUrl": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio20040261.html",
+      "urlType": "jinhak",
       "status": "open"
     },
     {
       "name": "부산대학교",
       "code": "12100601",
       "ratioUrl": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio12100601.html",
+      "urlType": "jinhak",
       "status": "open"
     },
     {
       "name": "부산외국어대학교",
       "code": "10750461",
       "ratioUrl": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10750461.html",
+      "urlType": "jinhak",
       "status": "open"
     },
     {
       "name": "삼육대학교",
       "code": "10760641",
       "ratioUrl": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10760641.html",
+      "urlType": "jinhak",
+      "status": "open"
+    },
+    {
+      "name": "상명대학교",
+      "code": "Sl5KYX0wVyU6TSZKclc6L0otZlRm",
+      "ratioUrl": "https://ratio.uwayapply.com/Sl5KYX0wVyU6TSZKclc6L0otZlRm",
+      "urlType": "uway",
+      "status": "open"
+    },
+    {
+      "name": "상지대학교",
+      "code": "Sl5KJS9yVzgmSnJXOi9KLWZUZg==",
+      "ratioUrl": "https://ratio.uwayapply.com/Sl5KJS9yVzgmSnJXOi9KLWZUZg==",
+      "urlType": "uway",
       "status": "open"
     },
     {
       "name": "서강대학교",
       "code": "12050441",
       "ratioUrl": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio12050441.html",
+      "urlType": "jinhak",
       "status": "open"
     },
     {
       "name": "서경대학교",
       "code": "10810611",
       "ratioUrl": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10810611.html",
+      "urlType": "jinhak",
+      "status": "open"
+    },
+    {
+      "name": "서울과학기술대학교",
+      "code": "Sl5KMDpXJkpyVzovSi1mVGY=",
+      "ratioUrl": "https://ratio.uwayapply.com/Sl5KMDpXJkpyVzovSi1mVGY=",
+      "urlType": "uway",
+      "status": "open"
+    },
+    {
+      "name": "서울교육대학교",
+      "code": "Sl5KYDpXJkpyVzovSi1mVGY=",
+      "ratioUrl": "https://ratio.uwayapply.com/Sl5KYDpXJkpyVzovSi1mVGY=",
+      "urlType": "uway",
       "status": "open"
     },
     {
       "name": "서울기독대학교",
       "code": "10520521",
       "ratioUrl": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10520521.html",
+      "urlType": "jinhak",
+      "status": "open"
+    },
+    {
+      "name": "서울시립대학교",
+      "code": "Sl5KJmE6SnJXOi9KLWZUZg==",
+      "ratioUrl": "https://ratio.uwayapply.com/Sl5KJmE6SnJXOi9KLWZUZg==",
+      "urlType": "uway",
+      "status": "open"
+    },
+    {
+      "name": "서울신학대학교",
+      "code": "Sl5KOjAmSnJXOi9KLWZUZg==",
+      "ratioUrl": "https://ratio.uwayapply.com/Sl5KOjAmSnJXOi9KLWZUZg==",
+      "urlType": "uway",
       "status": "open"
     },
     {
       "name": "서울여자대학교",
       "code": "10860661",
       "ratioUrl": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10860661.html",
+      "urlType": "jinhak",
+      "status": "open"
+    },
+    {
+      "name": "서울장신대학교",
+      "code": "Sl5KVyUmclc4L0M6YWAmSnJXOi9KLWZUZg==",
+      "ratioUrl": "https://ratio.uwayapply.com/Sl5KVyUmclc4L0M6YWAmSnJXOi9KLWZUZg==",
+      "urlType": "uway",
       "status": "open"
     },
     {
       "name": "서울한영대학교",
       "code": "11660401",
       "ratioUrl": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio11660401.html",
+      "urlType": "jinhak",
       "status": "open"
     },
     {
       "name": "서원대학교",
       "code": "10880541",
       "ratioUrl": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10880541.html",
+      "urlType": "jinhak",
+      "status": "open"
+    },
+    {
+      "name": "선문대학교",
+      "code": "Sl5KV2FhTVc6JkpyVzovSi1mVGY=",
+      "ratioUrl": "https://ratio.uwayapply.com/Sl5KV2FhTVc6JkpyVzovSi1mVGY=",
+      "urlType": "uway",
       "status": "open"
     },
     {
       "name": "성결대학교",
       "code": "10900691",
       "ratioUrl": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10900691.html",
+      "urlType": "jinhak",
       "status": "open"
     },
     {
       "name": "성공회대학교",
       "code": "10910461",
       "ratioUrl": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10910461.html",
+      "urlType": "jinhak",
       "status": "open"
     },
     {
       "name": "성균관대학교",
       "code": "10920501",
       "ratioUrl": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10920501.html",
+      "urlType": "jinhak",
       "status": "open"
     },
     {
       "name": "성신여자대학교",
       "code": "10930121",
       "ratioUrl": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10930121.html",
+      "urlType": "jinhak",
+      "status": "open"
+    },
+    {
+      "name": "세명대학교",
+      "code": "Sl5Kclc6Yk1gJkpyVzovSi1mVGY=",
+      "ratioUrl": "https://ratio.uwayapply.com/Sl5Kclc6Yk1gJkpyVzovSi1mVGY=",
+      "urlType": "uway",
       "status": "open"
     },
     {
       "name": "세종대학교",
       "code": "10950641",
       "ratioUrl": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10950641.html",
+      "urlType": "jinhak",
+      "status": "open"
+    },
+    {
+      "name": "송원대학교",
+      "code": "Sl5KV2FOcldhJkpyVzovSi1mVGY=",
+      "ratioUrl": "https://ratio.uwayapply.com/Sl5KV2FOcldhJkpyVzovSi1mVGY=",
+      "urlType": "uway",
       "status": "open"
     },
     {
       "name": "수원대학교",
       "code": "10970421",
       "ratioUrl": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10970421.html",
+      "urlType": "jinhak",
       "status": "open"
     },
     {
       "name": "숙명여자대학교",
       "code": "10981281",
       "ratioUrl": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio10981281.html",
+      "urlType": "jinhak",
+      "status": "open"
+    },
+    {
+      "name": "순천향대학교",
+      "code": "Sl5KfEwmSnJXOi9KLWZUZg==",
+      "ratioUrl": "https://ratio.uwayapply.com/Sl5KfEwmSnJXOi9KLWZUZg==",
+      "urlType": "uway",
       "status": "open"
     },
     {
       "name": "숭실대학교",
       "code": "11010721",
       "ratioUrl": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio11010721.html",
+      "urlType": "jinhak",
+      "status": "open"
+    },
+    {
+      "name": "신경주대학교",
+      "code": "Sl5KOi9yV2FgYnJKclc6L0otZlRm",
+      "ratioUrl": "https://ratio.uwayapply.com/Sl5KOi9yV2FgYnJKclc6L0otZlRm",
+      "urlType": "uway",
       "status": "open"
     },
     {
       "name": "신라대학교",
       "code": "11020571",
       "ratioUrl": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio11020571.html",
+      "urlType": "jinhak",
       "status": "open"
     },
     {
       "name": "신한대학교",
       "code": "11870691",
       "ratioUrl": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio11870691.html",
+      "urlType": "jinhak",
       "status": "open"
     },
     {
       "name": "아주대학교",
       "code": "11040651",
       "ratioUrl": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio11040651.html",
+      "urlType": "jinhak",
+      "status": "open"
+    },
+    {
+      "name": "안양대학교",
+      "code": "Sl5Kclc4Ylc4SnJXOi9KLWZUZg==",
+      "ratioUrl": "https://ratio.uwayapply.com/Sl5Kclc4Ylc4SnJXOi9KLWZUZg==",
+      "urlType": "uway",
+      "status": "open"
+    },
+    {
+      "name": "연세대학교(미래)",
+      "code": "Sl5KZiVgJldhYkpyVzovSi1mVGY=",
+      "ratioUrl": "https://ratio.uwayapply.com/Sl5KZiVgJldhYkpyVzovSi1mVGY=",
+      "urlType": "uway",
       "status": "open"
     },
     {
       "name": "연세대학교(서울)",
       "code": "11080721",
       "ratioUrl": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio11080721.html",
+      "urlType": "jinhak",
+      "status": "open"
+    },
+    {
+      "name": "영남대학교",
+      "code": "Sl5KOmJKclc6L0otZlRm",
+      "ratioUrl": "https://ratio.uwayapply.com/Sl5KOmJKclc6L0otZlRm",
+      "urlType": "uway",
       "status": "open"
     },
     {
       "name": "영산대학교",
       "code": "30100261",
       "ratioUrl": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio30100261.html",
+      "urlType": "jinhak",
+      "status": "open"
+    },
+    {
+      "name": "예수대학교",
+      "code": "Sl5KOmlNSnJXOi9KLWZUZg==",
+      "ratioUrl": "https://ratio.uwayapply.com/Sl5KOmlNSnJXOi9KLWZUZg==",
+      "urlType": "uway",
+      "status": "open"
+    },
+    {
+      "name": "용인대학교",
+      "code": "Sl5KVyVyV2FiSnJXOi9KLWZUZg==",
+      "ratioUrl": "https://ratio.uwayapply.com/Sl5KVyVyV2FiSnJXOi9KLWZUZg==",
+      "urlType": "uway",
       "status": "open"
     },
     {
       "name": "우석대학교",
       "code": "11150551",
       "ratioUrl": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio11150551.html",
+      "urlType": "jinhak",
+      "status": "open"
+    },
+    {
+      "name": "우송대학교",
+      "code": "Sl5KcldhJmFhTkpyVzovSi1mVGY=",
+      "ratioUrl": "https://ratio.uwayapply.com/Sl5KcldhJmFhTkpyVzovSi1mVGY=",
+      "urlType": "uway",
+      "status": "open"
+    },
+    {
+      "name": "울산과학기술대학교",
+      "code": "SmZKMCYlVzpKXiUmOiZKLWZUZg==",
+      "ratioUrl": "https://ratio.uwayapply.com/SmZKMCYlVzpKXiUmOiZKLWZUZg==",
+      "urlType": "uway",
+      "status": "open"
+    },
+    {
+      "name": "울산대학교",
+      "code": "Sl5KVzgmQzpKclc6L0otZlRm",
+      "ratioUrl": "https://ratio.uwayapply.com/Sl5KVzgmQzpKclc6L0otZlRm",
+      "urlType": "uway",
+      "status": "open"
+    },
+    {
+      "name": "원광대학교",
+      "code": "Sl5Kclc4TjlXYU5Kclc6L0otZlRm",
+      "ratioUrl": "https://ratio.uwayapply.com/Sl5Kclc4TjlXYU5Kclc6L0otZlRm",
+      "urlType": "uway",
+      "status": "open"
+    },
+    {
+      "name": "위덕대학교",
+      "code": null,
+      "ratioUrl": "https://portal.uu.ac.kr/ext/competition.jsp",
+      "urlType": "custom",
+      "status": "open"
+    },
+    {
+      "name": "유원대학교",
+      "code": null,
+      "ratioUrl": "https://ipsi.u1.ac.kr/ipsi/competition/type02-ratio.do",
+      "urlType": "custom",
       "status": "open"
     },
     {
       "name": "을지대학교",
       "code": "11190611",
       "ratioUrl": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio11190611.html",
+      "urlType": "jinhak",
       "status": "open"
     },
     {
       "name": "이화여자대학교",
       "code": "11201731",
       "ratioUrl": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio11201731.html",
+      "urlType": "jinhak",
+      "status": "open"
+    },
+    {
+      "name": "인제대학교",
+      "code": "Sl5KYC9XJUpyVzovSi1mVGY=",
+      "ratioUrl": "https://ratio.uwayapply.com/Sl5KYC9XJUpyVzovSi1mVGY=",
+      "urlType": "uway",
+      "status": "open"
+    },
+    {
+      "name": "인천가톨릭대학교",
+      "code": "Sl5KOkxMJUpyVzovSi1mVGY=",
+      "ratioUrl": "https://ratio.uwayapply.com/Sl5KOkxMJUpyVzovSi1mVGY=",
+      "urlType": "uway",
+      "status": "open"
+    },
+    {
+      "name": "인하대학교",
+      "code": "Sl5KOHxXJUpyVzovSi1mVGY=",
+      "ratioUrl": "https://ratio.uwayapply.com/Sl5KOHxXJUpyVzovSi1mVGY=",
+      "urlType": "uway",
+      "status": "open"
+    },
+    {
+      "name": "장로회신학대학교",
+      "code": "Sl5KJjBMaUpyVzovSi1mVGY=",
+      "ratioUrl": "https://ratio.uwayapply.com/Sl5KJjBMaUpyVzovSi1mVGY=",
+      "urlType": "uway",
+      "status": "open"
+    },
+    {
+      "name": "전남대학교",
+      "code": "Sl5KOlcvSnJXOi9KLWZUZg==",
+      "ratioUrl": "https://ratio.uwayapply.com/Sl5KOlcvSnJXOi9KLWZUZg==",
+      "urlType": "uway",
+      "status": "open"
+    },
+    {
+      "name": "전북대학교",
+      "code": "Sl5KOldCL0pyVzovSi1mVGY=",
+      "ratioUrl": "https://ratio.uwayapply.com/Sl5KOldCL0pyVzovSi1mVGY=",
+      "urlType": "uway",
+      "status": "open"
+    },
+    {
+      "name": "전주교육대학교",
+      "code": "Sl5KYDpXL0pyVzovSi1mVGY=",
+      "ratioUrl": "https://ratio.uwayapply.com/Sl5KYDpXL0pyVzovSi1mVGY=",
+      "urlType": "uway",
+      "status": "open"
+    },
+    {
+      "name": "전주대학교",
+      "code": "Sl5KOi9XYWAvSnJXOi9KLWZUZg==",
+      "ratioUrl": "https://ratio.uwayapply.com/Sl5KOi9XYWAvSnJXOi9KLWZUZg==",
+      "urlType": "uway",
+      "status": "open"
+    },
+    {
+      "name": "제주대학교",
+      "code": "Sl5KOlc6L2AvSnJXOi9KLWZUZg==",
+      "ratioUrl": "https://ratio.uwayapply.com/Sl5KOlc6L2AvSnJXOi9KLWZUZg==",
+      "urlType": "uway",
       "status": "open"
     },
     {
       "name": "조선대학교",
       "code": "11300511",
       "ratioUrl": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio11300511.html",
+      "urlType": "jinhak",
       "status": "open"
     },
     {
       "name": "중부대학교",
       "code": "11310871",
       "ratioUrl": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio11310871.html",
+      "urlType": "jinhak",
+      "status": "open"
+    },
+    {
+      "name": "중앙대학교",
+      "code": "Sl5KOjhMSnJXOi9KLWZUZg==",
+      "ratioUrl": "https://ratio.uwayapply.com/Sl5KOjhMSnJXOi9KLWZUZg==",
+      "urlType": "uway",
       "status": "open"
     },
     {
       "name": "중원대학교",
       "code": "11920231",
       "ratioUrl": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio11920231.html",
+      "urlType": "jinhak",
+      "status": "open"
+    },
+    {
+      "name": "진주교육대학교",
+      "code": "Sl5KYDpMSnJXOi9KLWZUZg==",
+      "ratioUrl": "https://ratio.uwayapply.com/Sl5KYDpMSnJXOi9KLWZUZg==",
+      "urlType": "uway",
+      "status": "open"
+    },
+    {
+      "name": "차 의과학대학교",
+      "code": "Sl5KOHxMSnJXOi9KLWZUZg==",
+      "ratioUrl": "https://ratio.uwayapply.com/Sl5KOHxMSnJXOi9KLWZUZg==",
+      "urlType": "uway",
+      "status": "open"
+    },
+    {
+      "name": "창신대학교",
+      "code": null,
+      "ratioUrl": "https://ipsi.cs.ac.kr/ratio/2026/2.do",
+      "urlType": "custom",
+      "status": "open"
+    },
+    {
+      "name": "청운대학교",
+      "code": "Sl5KV2FhTnJXOnxMSnJXOi9KLWZUZg==",
+      "ratioUrl": "https://ratio.uwayapply.com/Sl5KV2FhTnJXOnxMSnJXOi9KLWZUZg==",
+      "urlType": "uway",
       "status": "open"
     },
     {
       "name": "청주교육대학교",
       "code": "20100311",
       "ratioUrl": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio20100311.html",
+      "urlType": "jinhak",
+      "status": "open"
+    },
+    {
+      "name": "청주대학교",
+      "code": "Sl5KOi9yV2FgfExKclc6L0otZlRm",
+      "ratioUrl": "https://ratio.uwayapply.com/Sl5KOi9yV2FgfExKclc6L0otZlRm",
+      "urlType": "uway",
+      "status": "open"
+    },
+    {
+      "name": "초당대학교",
+      "code": "Sl5Kclc4VmF8TEpyVzovSi1mVGY=",
+      "ratioUrl": "https://ratio.uwayapply.com/Sl5Kclc4VmF8TEpyVzovSi1mVGY=",
+      "urlType": "uway",
+      "status": "open"
+    },
+    {
+      "name": "총신대학교",
+      "code": "Sl5KVyV8JnJXYXxMSnJXOi9KLWZUZg==",
+      "ratioUrl": "https://ratio.uwayapply.com/Sl5KVyV8JnJXYXxMSnJXOi9KLWZUZg==",
+      "urlType": "uway",
+      "status": "open"
+    },
+    {
+      "name": "추계예술대학교",
+      "code": "Sl5KYGJyOnxMSnJXOi9KLWZUZg==",
+      "ratioUrl": "https://ratio.uwayapply.com/Sl5KYGJyOnxMSnJXOi9KLWZUZg==",
+      "urlType": "uway",
       "status": "open"
     },
     {
       "name": "춘천교육대학교",
       "code": "20110301",
       "ratioUrl": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio20110301.html",
+      "urlType": "jinhak",
       "status": "open"
     },
     {
       "name": "충남대학교",
       "code": "11400421",
       "ratioUrl": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio11400421.html",
+      "urlType": "jinhak",
       "status": "open"
     },
     {
       "name": "충북대학교",
       "code": "11410901",
       "ratioUrl": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio11410901.html",
+      "urlType": "jinhak",
+      "status": "open"
+    },
+    {
+      "name": "침례신학대학교",
+      "code": "Sl5KJjowQjlKclc6L0otZlRm",
+      "ratioUrl": "https://ratio.uwayapply.com/Sl5KJjowQjlKclc6L0otZlRm",
+      "urlType": "uway",
+      "status": "open"
+    },
+    {
+      "name": "칼빈대학교",
+      "code": "Sl5KVyVEQzhMSnJXOi9KLWZUZg==",
+      "ratioUrl": "https://ratio.uwayapply.com/Sl5KVyVEQzhMSnJXOi9KLWZUZg==",
+      "urlType": "uway",
+      "status": "open"
+    },
+    {
+      "name": "평택대학교",
+      "code": "Sl5KOjBpSnJXOi9KLWZUZg==",
+      "ratioUrl": "https://ratio.uwayapply.com/Sl5KOjBpSnJXOi9KLWZUZg==",
+      "urlType": "uway",
       "status": "open"
     },
     {
       "name": "한경국립대학교",
       "code": "30161041",
       "ratioUrl": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio30161041.html",
+      "urlType": "jinhak",
       "status": "open"
     },
     {
       "name": "한국공학대학교",
       "code": "30170641",
       "ratioUrl": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio30170641.html",
+      "urlType": "jinhak",
+      "status": "open"
+    },
+    {
+      "name": "한국과학기술원",
+      "code": "SmZKMCYlODlKXiUmOiZKLWZUZg==",
+      "ratioUrl": "https://ratio.uwayapply.com/SmZKMCYlODlKXiUmOiZKLWZUZg==",
+      "urlType": "uway",
       "status": "open"
     },
     {
       "name": "한국교원대학교",
       "code": "11480361",
       "ratioUrl": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio11480361.html",
+      "urlType": "jinhak",
+      "status": "open"
+    },
+    {
+      "name": "한국기술교육대학교",
+      "code": "Sl5KfExgMDhgfWE5SnJXOi9KLWZUZg==",
+      "ratioUrl": "https://ratio.uwayapply.com/Sl5KfExgMDhgfWE5SnJXOi9KLWZUZg==",
+      "urlType": "uway",
+      "status": "open"
+    },
+    {
+      "name": "한국에너지공과대학교(KENTECH)",
+      "code": "SmZKfExgMFdgOUpeJSY6JkotZlRm",
+      "ratioUrl": "https://ratio.uwayapply.com/SmZKfExgMFdgOUpeJSY6JkotZlRm",
+      "urlType": "uway",
+      "status": "open"
+    },
+    {
+      "name": "한국외국어대학교",
+      "code": "Sl5KJmg6fEpyVzovSi1mVGY=",
+      "ratioUrl": "https://ratio.uwayapply.com/Sl5KJmg6fEpyVzovSi1mVGY=",
+      "urlType": "uway",
       "status": "open"
     },
     {
       "name": "한국체육대학교",
       "code": "11530401",
       "ratioUrl": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio11530401.html",
+      "urlType": "jinhak",
       "status": "open"
     },
     {
       "name": "한국항공대학교",
       "code": "11540891",
       "ratioUrl": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio11540891.html",
+      "urlType": "jinhak",
       "status": "open"
     },
     {
       "name": "한남대학교",
       "code": "11560811",
       "ratioUrl": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio11560811.html",
+      "urlType": "jinhak",
       "status": "open"
     },
     {
       "name": "한동대학교",
       "code": "11570721",
       "ratioUrl": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio11570721.html",
+      "urlType": "jinhak",
+      "status": "open"
+    },
+    {
+      "name": "한라대학교",
+      "code": "Sl5KOENDOHxKclc6L0otZlRm",
+      "ratioUrl": "https://ratio.uwayapply.com/Sl5KOENDOHxKclc6L0otZlRm",
+      "urlType": "uway",
+      "status": "open"
+    },
+    {
+      "name": "한림대학교",
+      "code": "Sl5KTWJDQzh8SnJXOi9KLWZUZg==",
+      "ratioUrl": "https://ratio.uwayapply.com/Sl5KTWJDQzh8SnJXOi9KLWZUZg==",
+      "urlType": "uway",
       "status": "open"
     },
     {
       "name": "한서대학교",
       "code": "11600801",
       "ratioUrl": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio11600801.html",
+      "urlType": "jinhak",
+      "status": "open"
+    },
+    {
+      "name": "한성대학교",
+      "code": "Sl5Kclc6Jlc4fEpyVzovSi1mVGY=",
+      "ratioUrl": "https://ratio.uwayapply.com/Sl5Kclc6Jlc4fEpyVzovSi1mVGY=",
+      "urlType": "uway",
+      "status": "open"
+    },
+    {
+      "name": "한세대학교",
+      "code": "Sl5KJWAmVzh8SnJXOi9KLWZUZg==",
+      "ratioUrl": "https://ratio.uwayapply.com/Sl5KJWAmVzh8SnJXOi9KLWZUZg==",
+      "urlType": "uway",
       "status": "open"
     },
     {
       "name": "한신대학교",
       "code": "11630411",
       "ratioUrl": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio11630411.html",
+      "urlType": "jinhak",
       "status": "open"
     },
     {
       "name": "한양대학교(서울)",
       "code": "11640511",
       "ratioUrl": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio11640511.html",
+      "urlType": "jinhak",
       "status": "open"
     },
     {
       "name": "한양대학교(ERICA)",
       "code": "11650671",
       "ratioUrl": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio11650671.html",
+      "urlType": "jinhak",
+      "status": "open"
+    },
+    {
+      "name": "한일장신대학교",
+      "code": "Sl5KQyVXOHxKclc6L0otZlRm",
+      "ratioUrl": "https://ratio.uwayapply.com/Sl5KQyVXOHxKclc6L0otZlRm",
+      "urlType": "uway",
+      "status": "open"
+    },
+    {
+      "name": "협성대학교",
+      "code": "Sl5Kclc6Jmk6YnxKclc6L0otZlRm",
+      "ratioUrl": "https://ratio.uwayapply.com/Sl5Kclc6Jmk6YnxKclc6L0otZlRm",
+      "urlType": "uway",
       "status": "open"
     },
     {
       "name": "호남대학교",
       "code": "11690581",
       "ratioUrl": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio11690581.html",
+      "urlType": "jinhak",
+      "status": "open"
+    },
+    {
+      "name": "호서대학교",
+      "code": "Sl5KYWAmYXxKclc6L0otZlRm",
+      "ratioUrl": "https://ratio.uwayapply.com/Sl5KYWAmYXxKclc6L0otZlRm",
+      "urlType": "uway",
       "status": "open"
     },
     {
       "name": "홍익대학교(서울)",
       "code": "11720771",
       "ratioUrl": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio11720771.html",
+      "urlType": "jinhak",
       "status": "open"
     },
     {
       "name": "홍익대학교(세종)",
       "code": "11720772",
       "ratioUrl": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio11720772.html",
+      "urlType": "jinhak",
       "status": "open"
     },
     {
       "name": "화성의과학대학교",
       "code": "11880411",
       "ratioUrl": "https://addon.jinhakapply.com/RatioV1/RatioH/Ratio11880411.html",
+      "urlType": "jinhak",
       "status": "open"
     }
   ],
-  "preparing": [
-    {
-      "name": "경운대학교",
-      "code": null,
-      "ratioUrl": null,
-      "status": "preparing"
-    },
-    {
-      "name": "경일대학교",
-      "code": null,
-      "ratioUrl": null,
-      "status": "preparing"
-    },
-    {
-      "name": "세한대학교",
-      "code": null,
-      "ratioUrl": null,
-      "status": "preparing"
-    },
-    {
-      "name": "예원예술대학교",
-      "code": null,
-      "ratioUrl": null,
-      "status": "preparing"
-    },
-    {
-      "name": "한국성서대학교",
-      "code": null,
-      "ratioUrl": null,
-      "status": "preparing"
-    },
-    {
-      "name": "호원대학교",
-      "code": null,
-      "ratioUrl": null,
-      "status": "preparing"
-    }
-  ]
+  "preparing": []
 }
