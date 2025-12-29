@@ -102,6 +102,7 @@ export function LowestRateSection({ data, groupColor }: LowestRateSectionProps) 
                 <th className="px-3 py-3 text-center font-medium text-gray-600 w-10">#</th>
                 <th className="px-3 py-3 text-left font-medium text-gray-600">대학명</th>
                 <th className="px-3 py-3 text-left font-medium text-gray-600">캠퍼스</th>
+                <th className="px-3 py-3 text-left font-medium text-gray-600">전형명</th>
                 <th className="px-3 py-3 text-left font-medium text-gray-600">모집단위</th>
                 <th className="px-3 py-3 text-center font-medium text-gray-600">정원</th>
                 <th className="px-3 py-3 text-center font-medium text-gray-600">지원</th>
@@ -127,6 +128,7 @@ export function LowestRateSection({ data, groupColor }: LowestRateSectionProps) 
                     )}
                   </td>
                   <td className="px-3 py-3 text-gray-600 text-xs">{item.캠퍼스 || '-'}</td>
+                  <td className="px-3 py-3 text-gray-600 text-xs">{item.전형명 || '-'}</td>
                   <td className="px-3 py-3 text-gray-600">{item.모집단위}</td>
                   <td className="px-3 py-3 text-center text-gray-600">{item.정원 ?? item.모집인원}</td>
                   <td className="px-3 py-3 text-center text-gray-600">{item.지원인원}</td>

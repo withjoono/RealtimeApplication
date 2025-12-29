@@ -9,9 +9,13 @@ const CONFIG = {
   RATIO_BASE_URL: 'https://addon.jinhakapply.com/RatioV1/RatioH/',
   UWAY_BASE_URL: 'https://ratio.uwayapply.com/',
   OUTPUT_DIR: './output',
+  HISTORY_DIR: './output/history',
+  BACKUP_DIR: './output/backup',
   FRONTEND_PUBLIC_DIR: './frontend/public',
   MONITOR_INTERVAL: 300000, // 5분마다 체크
   AUTO_DEPLOY: true, // 자동 배포 활성화
+  MIN_DATA_RATIO: 0.7, // 최소 데이터 비율 (70%)
+  MIN_UNIVERSITIES: 100, // 최소 대학 수
 };
 
 // 출력 디렉토리 생성
@@ -24,21 +28,318 @@ if (!fs.existsSync(CONFIG.FRONTEND_PUBLIC_DIR)) {
   fs.mkdirSync(CONFIG.FRONTEND_PUBLIC_DIR, { recursive: true });
 }
 
+// 히스토리 디렉토리 생성
+if (!fs.existsSync(CONFIG.HISTORY_DIR)) {
+  fs.mkdirSync(CONFIG.HISTORY_DIR, { recursive: true });
+}
+
+// 백업 디렉토리 생성
+if (!fs.existsSync(CONFIG.BACKUP_DIR)) {
+  fs.mkdirSync(CONFIG.BACKUP_DIR, { recursive: true });
+}
+
+/**
+ * 현재 데이터 백업
+ * @returns {Object} 백업 결과 { success, backupPath, universityCount }
+ */
+function backupCurrentData() {
+  const sourceFile = path.join(CONFIG.OUTPUT_DIR, 'organized_latest.json');
+
+  if (!fs.existsSync(sourceFile)) {
+    console.log('ℹ️ 백업할 기존 데이터 없음 (첫 크롤링)');
+    return { success: true, backupPath: null, universityCount: 0 };
+  }
+
+  try {
+    const timestamp = new Date().toISOString().replace(/[:.]/g, '-');
+    const backupPath = path.join(CONFIG.BACKUP_DIR, `organized_backup_${timestamp}.json`);
+
+    // 기존 데이터 읽기
+    const existingData = JSON.parse(fs.readFileSync(sourceFile, 'utf-8'));
+
+    // 대학 수 계산
+    let universityCount = 0;
+    ['가군', '나군', '다군'].forEach(group => {
+      if (existingData[group]) {
+        universityCount += Object.keys(existingData[group]).length;
+      }
+    });
+
+    // 백업 저장
+    fs.copyFileSync(sourceFile, backupPath);
+    console.log(`📦 백업 완료: ${backupPath} (${universityCount}개 대학)`);
+
+    // 오래된 백업 정리 (최근 10개만 유지)
+    const backupFiles = fs.readdirSync(CONFIG.BACKUP_DIR)
+      .filter(f => f.startsWith('organized_backup_'))
+      .sort()
+      .reverse();
+
+    if (backupFiles.length > 10) {
+      backupFiles.slice(10).forEach(f => {
+        fs.unlinkSync(path.join(CONFIG.BACKUP_DIR, f));
+      });
+      console.log(`🗑️ 오래된 백업 ${backupFiles.length - 10}개 삭제`);
+    }
+
+    return { success: true, backupPath, universityCount };
+  } catch (error) {
+    console.error('❌ 백업 실패:', error.message);
+    return { success: false, backupPath: null, universityCount: 0, error: error.message };
+  }
+}
+
+/**
+ * 히스토리에 데이터 저장
+ * @param {Object} organizedData - 군별 정리된 데이터
+ */
+function saveToHistory(organizedData) {
+  try {
+    const now = new Date();
+    const dateStr = now.toISOString().split('T')[0]; // YYYY-MM-DD
+    const timeStr = now.toTimeString().split(' ')[0].replace(/:/g, ''); // HHMMSS
+    const historyPath = path.join(CONFIG.HISTORY_DIR, `${dateStr}_${timeStr}.json`);
+
+    // 메타데이터 추가
+    const historyData = {
+      savedAt: now.toISOString(),
+      ...organizedData
+    };
+
+    fs.writeFileSync(historyPath, JSON.stringify(historyData, null, 2), 'utf-8');
+    console.log(`📜 히스토리 저장: ${historyPath}`);
+
+    // 오래된 히스토리 정리 (7일 이상 된 파일 삭제)
+    const sevenDaysAgo = new Date(now.getTime() - 7 * 24 * 60 * 60 * 1000);
+    const historyFiles = fs.readdirSync(CONFIG.HISTORY_DIR).filter(f => f.endsWith('.json'));
+
+    let deletedCount = 0;
+    historyFiles.forEach(f => {
+      const dateMatch = f.match(/^(\d{4}-\d{2}-\d{2})/);
+      if (dateMatch) {
+        const fileDate = new Date(dateMatch[1]);
+        if (fileDate < sevenDaysAgo) {
+          fs.unlinkSync(path.join(CONFIG.HISTORY_DIR, f));
+          deletedCount++;
+        }
+      }
+    });
+
+    if (deletedCount > 0) {
+      console.log(`🗑️ 7일 이상 된 히스토리 ${deletedCount}개 삭제`);
+    }
+
+    return true;
+  } catch (error) {
+    console.error('⚠️ 히스토리 저장 실패:', error.message);
+    return false;
+  }
+}
+
+/**
+ * 새 데이터 검증
+ * @param {Object} newData - 새로 크롤링한 데이터 (organized format)
+ * @param {number} previousUniversityCount - 이전 대학 수
+ * @returns {Object} 검증 결과 { valid, reason, newCount, ratio }
+ */
+function validateNewData(newData, previousUniversityCount) {
+  // 새 데이터의 대학 수 계산
+  let newUniversityCount = 0;
+  ['가군', '나군', '다군'].forEach(group => {
+    if (newData[group]) {
+      newUniversityCount += Object.keys(newData[group]).length;
+    }
+  });
+
+  console.log(`\n🔍 데이터 검증 중...`);
+  console.log(`   이전 대학 수: ${previousUniversityCount}개`);
+  console.log(`   새 대학 수: ${newUniversityCount}개`);
+
+  // 첫 크롤링인 경우
+  if (previousUniversityCount === 0) {
+    // 최소 대학 수 체크
+    if (newUniversityCount < CONFIG.MIN_UNIVERSITIES) {
+      return {
+        valid: false,
+        reason: `최소 대학 수 미달 (${newUniversityCount} < ${CONFIG.MIN_UNIVERSITIES})`,
+        newCount: newUniversityCount,
+        ratio: 0
+      };
+    }
+    return {
+      valid: true,
+      reason: '첫 크롤링 - 최소 대학 수 충족',
+      newCount: newUniversityCount,
+      ratio: 1
+    };
+  }
+
+  // 데이터 비율 계산
+  const ratio = newUniversityCount / previousUniversityCount;
+  console.log(`   데이터 비율: ${(ratio * 100).toFixed(1)}% (기준: ${CONFIG.MIN_DATA_RATIO * 100}%)`);
+
+  // 70% 이상 체크
+  if (ratio < CONFIG.MIN_DATA_RATIO) {
+    return {
+      valid: false,
+      reason: `데이터 비율 미달: ${(ratio * 100).toFixed(1)}% < ${CONFIG.MIN_DATA_RATIO * 100}%`,
+      newCount: newUniversityCount,
+      ratio
+    };
+  }
+
+  // 최소 대학 수 체크
+  if (newUniversityCount < CONFIG.MIN_UNIVERSITIES) {
+    return {
+      valid: false,
+      reason: `최소 대학 수 미달 (${newUniversityCount} < ${CONFIG.MIN_UNIVERSITIES})`,
+      newCount: newUniversityCount,
+      ratio
+    };
+  }
+
+  return {
+    valid: true,
+    reason: `검증 통과: ${(ratio * 100).toFixed(1)}% (${newUniversityCount}개 대학)`,
+    newCount: newUniversityCount,
+    ratio
+  };
+}
+
+/**
+ * 안전한 배포 - 백업 → 크롤링 → 검증 → 배포 또는 롤백
+ * @param {Array} crawledResults - 크롤링 결과 배열
+ * @returns {Object} 배포 결과
+ */
+async function safeDeploy(crawledResults) {
+  console.log('\n' + '='.repeat(60));
+  console.log('🔐 안전 배포 모드 시작');
+  console.log('='.repeat(60));
+
+  // 1. 기존 데이터 백업
+  const backupResult = backupCurrentData();
+  if (!backupResult.success) {
+    console.log('❌ 백업 실패로 배포 중단');
+    return { success: false, reason: '백업 실패' };
+  }
+
+  // 2. 새 데이터 정리 (군별 분류)
+  const tempJsonPath = path.join(CONFIG.OUTPUT_DIR, '_temp_safe_deploy.json');
+  fs.writeFileSync(tempJsonPath, JSON.stringify(crawledResults, null, 2), 'utf-8');
+
+  try {
+    processAndSave(tempJsonPath, CONFIG.OUTPUT_DIR);
+  } catch (e) {
+    console.log('⚠️ 데이터 정리 중 오류:', e.message);
+    return { success: false, reason: '데이터 정리 실패' };
+  } finally {
+    if (fs.existsSync(tempJsonPath)) {
+      fs.unlinkSync(tempJsonPath);
+    }
+  }
+
+  // 3. 새 데이터 로드 및 검증
+  const organizedPath = path.join(CONFIG.OUTPUT_DIR, 'organized_latest.json');
+  const newOrganizedData = JSON.parse(fs.readFileSync(organizedPath, 'utf-8'));
+
+  const validation = validateNewData(newOrganizedData, backupResult.universityCount);
+
+  if (!validation.valid) {
+    console.log(`\n🚨 검증 실패: ${validation.reason}`);
+    console.log('⏪ 백업에서 복원 중...');
+
+    // 롤백: 백업 데이터 복원
+    if (backupResult.backupPath && fs.existsSync(backupResult.backupPath)) {
+      fs.copyFileSync(backupResult.backupPath, organizedPath);
+      console.log('✅ 백업 복원 완료 - 배포 취소됨');
+    }
+
+    return {
+      success: false,
+      reason: validation.reason,
+      previousCount: backupResult.universityCount,
+      newCount: validation.newCount,
+      ratio: validation.ratio
+    };
+  }
+
+  console.log(`\n✅ ${validation.reason}`);
+
+  // 4. 히스토리 저장
+  saveToHistory(newOrganizedData);
+
+  // 5. 프론트엔드 동기화 및 배포
+  console.log('\n🚀 프론트엔드 배포 시작...');
+  const deploySuccess = await syncToFrontendAndDeploy();
+
+  if (deploySuccess) {
+    console.log('\n' + '='.repeat(60));
+    console.log('🎉 안전 배포 완료!');
+    console.log('='.repeat(60));
+  }
+
+  return {
+    success: true,
+    previousCount: backupResult.universityCount,
+    newCount: validation.newCount,
+    ratio: validation.ratio,
+    deployed: deploySuccess
+  };
+}
+
+/**
+ * 데이터 매핑 파이프라인 실행 (지역 + 추합 + 예상경쟁률)
+ */
+function runDataMappingPipeline() {
+  const { execSync } = require('child_process');
+
+  console.log('🔄 데이터 매핑 파이프라인 실행 중...');
+
+  try {
+    // 1. 지역 매핑 (organized_latest.json → organized_with_region.json)
+    console.log('   📍 지역 매핑 중...');
+    execSync('node regionMapper.js', { stdio: 'pipe' });
+
+    // 2. 추합 + 예상경쟁률 매핑 (organized_with_region.json → organized_with_chuhap.json)
+    console.log('   📊 추합/예상경쟁률 매핑 중...');
+    execSync('node lastYearMapper.js', { stdio: 'pipe' });
+
+    console.log('✅ 데이터 매핑 완료');
+    return true;
+  } catch (err) {
+    console.log('⚠️ 데이터 매핑 실패:', err.message);
+    return false;
+  }
+}
+
 /**
  * 프론트엔드에 데이터 복사 및 배포
  */
 async function syncToFrontendAndDeploy() {
-  const sourceFile = path.join(CONFIG.OUTPUT_DIR, 'organized_latest.json');
-  const targetFile = path.join(CONFIG.FRONTEND_PUBLIC_DIR, 'organized_latest.json');
+  // 매핑 파이프라인 실행
+  runDataMappingPipeline();
 
-  if (!fs.existsSync(sourceFile)) {
-    console.log('⚠️ organized_latest.json 파일이 없습니다.');
+  const sourceFile = path.join(CONFIG.OUTPUT_DIR, 'organized_with_chuhap.json');
+  const targetFile = path.join(CONFIG.FRONTEND_PUBLIC_DIR, 'organized_with_chuhap.json');
+
+  // organized_with_chuhap.json이 없으면 organized_latest.json 사용
+  const actualSource = fs.existsSync(sourceFile)
+    ? sourceFile
+    : path.join(CONFIG.OUTPUT_DIR, 'organized_latest.json');
+
+  if (!fs.existsSync(actualSource)) {
+    console.log('⚠️ 데이터 파일이 없습니다.');
     return false;
   }
 
   try {
     // 1. 프론트엔드로 복사
-    fs.copyFileSync(sourceFile, targetFile);
+    fs.copyFileSync(actualSource, targetFile);
+    // organized_latest.json도 복사 (백업용)
+    fs.copyFileSync(
+      path.join(CONFIG.OUTPUT_DIR, 'organized_latest.json'),
+      path.join(CONFIG.FRONTEND_PUBLIC_DIR, 'organized_latest.json')
+    );
     console.log('📋 프론트엔드에 데이터 복사 완료');
 
     // 2. 자동 배포 (설정된 경우)
@@ -54,16 +355,16 @@ async function syncToFrontendAndDeploy() {
         });
         console.log('✅ 빌드 완료');
 
-        // Cloud Run 배포 (gcloud 설치되어 있는 경우)
+        // Firebase 배포
         try {
-          execSync('gcloud run deploy jinhak-ratio --source . --region asia-northeast3 --allow-unauthenticated --quiet', {
+          execSync('npx firebase deploy --only hosting', {
             cwd: path.resolve('./frontend'),
             stdio: 'inherit'
           });
-          console.log('🎉 Cloud Run 배포 완료!');
+          console.log('🎉 Firebase 배포 완료!');
         } catch (deployErr) {
-          console.log('⚠️ Cloud Run 배포 실패 (gcloud 미설치 또는 권한 문제)');
-          console.log('   수동 배포: cd frontend && gcloud run deploy');
+          console.log('⚠️ Firebase 배포 실패');
+          console.log('   수동 배포: cd frontend && npx firebase deploy --only hosting');
         }
       } catch (buildErr) {
         console.log('⚠️ 빌드 실패:', buildErr.message);
@@ -639,7 +940,7 @@ async function monitorNewOpenings() {
         console.log('\n✅ 변경사항 없음');
       }
 
-      // 최신 데이터 저장
+      // 최신 데이터 저장 (raw data)
       const currentData = {};
       results.forEach(r => { currentData[r.university] = r; });
 
@@ -651,16 +952,6 @@ async function monitorNewOpenings() {
       // 최신 데이터 엑셀 저장 (항상 업데이트)
       const latestExcelPath = path.join(CONFIG.OUTPUT_DIR, 'latest_data.xlsx');
       saveToExcel(results, latestExcelPath);
-
-      // 군별 정리된 데이터 저장
-      const tempJsonPath = path.join(CONFIG.OUTPUT_DIR, '_temp_results.json');
-      fs.writeFileSync(tempJsonPath, JSON.stringify(results, null, 2), 'utf-8');
-      try {
-        processAndSave(tempJsonPath, CONFIG.OUTPUT_DIR);
-        fs.unlinkSync(tempJsonPath);
-      } catch (e) {
-        console.log('⚠️ 데이터 정리 중 오류:', e.message);
-      }
 
       // JSON 저장 (변경사항이 있을 때만 타임스탬프 파일 생성)
       if (changesLog.length > 0 || newlyOpened.length > 0) {
@@ -682,9 +973,23 @@ async function monitorNewOpenings() {
         preparing: preparingUniversities
       }, null, 2), 'utf-8');
 
-      // 프론트엔드 동기화 및 배포 (변경사항이 있을 때만)
+      // 🔐 안전 배포 (변경사항이 있을 때만)
       if (changesLog.length > 0 || newlyOpened.length > 0) {
-        await syncToFrontendAndDeploy();
+        const deployResult = await safeDeploy(results);
+        if (!deployResult.success) {
+          console.log(`⚠️ 안전 배포 실패: ${deployResult.reason}`);
+          console.log('   기존 데이터가 유지됩니다.');
+        }
+      } else {
+        // 변경사항 없어도 군별 정리 데이터는 업데이트
+        const tempJsonPath = path.join(CONFIG.OUTPUT_DIR, '_temp_results.json');
+        fs.writeFileSync(tempJsonPath, JSON.stringify(results, null, 2), 'utf-8');
+        try {
+          processAndSave(tempJsonPath, CONFIG.OUTPUT_DIR);
+          fs.unlinkSync(tempJsonPath);
+        } catch (e) {
+          console.log('⚠️ 데이터 정리 중 오류:', e.message);
+        }
       }
 
       // 이전 데이터 업데이트
@@ -759,6 +1064,41 @@ switch (command) {
     });
     break;
 
+  case 'safe-crawl':
+    // 안전 크롤링: 백업 → 크롤링 → 검증 → 배포
+    (async () => {
+      const browser = await chromium.launch({ headless: true });
+      const context = await browser.newContext();
+      const page = await context.newPage();
+
+      console.log('📚 대학 목록 가져오는 중...');
+      const universities = await getUniversityList(page);
+      const openUniversities = universities.filter(u => u.status === 'open' && u.ratioUrl);
+
+      console.log(`✅ 오픈된 대학: ${openUniversities.length}개`);
+
+      const results = [];
+      for (const univ of openUniversities) {
+        if (univ.urlType === 'custom') continue;
+        console.log(`🔍 크롤링 중: ${univ.name} [${univ.urlType}]`);
+        const data = await scrapeRatioPage(page, univ.ratioUrl, univ.name, univ.urlType);
+        results.push(data);
+        await page.waitForTimeout(1000);
+      }
+
+      await browser.close();
+
+      // 안전 배포
+      const deployResult = await safeDeploy(results);
+      if (deployResult.success) {
+        console.log('\n✅ 안전 크롤링 완료!');
+      } else {
+        console.log(`\n❌ 안전 크롤링 실패: ${deployResult.reason}`);
+      }
+      process.exit(deployResult.success ? 0 : 1);
+    })();
+    break;
+
   case 'monitor':
     monitorNewOpenings();
     break;
@@ -772,15 +1112,36 @@ switch (command) {
     }
     break;
 
+  case 'backup':
+    // 현재 데이터 백업
+    const backupResult = backupCurrentData();
+    if (backupResult.success) {
+      console.log('✅ 백업 완료');
+    } else {
+      console.log('❌ 백업 실패');
+    }
+    break;
+
   default:
     console.log(`
 🎓 대학 경쟁률 크롤러
 
 사용법:
-  node crawler.js crawl              - 모든 오픈된 대학 크롤링
+  node crawler.js crawl              - 모든 오픈된 대학 크롤링 (기존 방식)
+  node crawler.js safe-crawl         - 안전 크롤링 (백업 → 검증 → 배포/롤백)
   node crawler.js monitor            - 새로 오픈되는 대학 모니터링 (Ctrl+C로 종료)
   node crawler.js university <이름>  - 특정 대학만 크롤링
+  node crawler.js backup             - 현재 데이터 백업
     `);
 }
 
-module.exports = { crawlAllUniversities, monitorNewOpenings, crawlSpecificUniversity, syncToFrontendAndDeploy };
+module.exports = {
+  crawlAllUniversities,
+  monitorNewOpenings,
+  crawlSpecificUniversity,
+  syncToFrontendAndDeploy,
+  safeDeploy,
+  backupCurrentData,
+  validateNewData,
+  saveToHistory
+};
